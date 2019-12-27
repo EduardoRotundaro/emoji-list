@@ -3,7 +3,7 @@ import React from 'react';
 export default props => {
     const item = props.emoji;
     return (
-        <div className="card">
+        <div className="card" onClick={props.onClick}>
             <div className="head">
                 <h2>{item.emoji}</h2>
             </div>

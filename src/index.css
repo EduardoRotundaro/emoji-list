@@ -39,8 +39,14 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600;
+    line-height: 16px;
 }
 
 .tags span{
     font-weight: 500;
+}
+
+.col-lg-2{
+    margin-top: 10px; 
+    margin-bottom: 10px; 
 }

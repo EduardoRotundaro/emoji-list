@@ -1,15 +1,17 @@
 import React from 'react';
 
-import { EMOJI_LIST } from './list';
+import { EMOJI_LIST, getEmoji } from './list';
 
 import Card from './Card';
 
 export default props => {
 
-    const copyToClipBoard = () => {
+    const copyToClipBoard = (index) => {
+        const emoji = getEmoji(index);
+
         let dummy = document.createElement("textarea");
         document.body.appendChild(dummy);
-        dummy.value = 'test';
+        dummy.value = emoji;
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
@@ -18,7 +20,7 @@ export default props => {
     function renderCards (){
         return EMOJI_LIST.map((item, index) => (
             <div key={`card_${index}`} className="col-lg-2 col-sm-3 col-4">
-                <Card emoji={item} />
+                <Card emoji={item} onClick={()=> copyToClipBoard(index)} />
             </div>
         ));
     }
