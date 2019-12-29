@@ -1,4 +1,4 @@
-const LIST = [
+const SMILEYS_PEOPLE = [
     { emoji: "👌🏿", tags: ['Ok'] },
     { emoji: "👌🏾", tags: ['Ok'] },
     { emoji: "👌🏽", tags: ['Ok'] },
@@ -145,6 +145,8 @@ const LIST = [
     { emoji: "💅", tags: ['Nail Polish'] },
 ];
 
-export const EMOJI_LIST = LIST;
+export const SMILEYS_PEOPLE_LIST = SMILEYS_PEOPLE;
 
-export const getEmoji = (index) => ((LIST[index] && LIST[index].emoji) || '');
+export const getEmoji = (index, sub) => {
+    if(sub==='SMILEYS_PEOPLE') return ((SMILEYS_PEOPLE[index] && SMILEYS_PEOPLE[index].emoji) || '');
+}
