@@ -2,7 +2,7 @@
 
 ---
 
-### About
+## About
 
 An easy way to copy emojis.
 
