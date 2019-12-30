@@ -10,7 +10,14 @@ import {
 import List from './List';
 
 import {
-    SMILEYS_PEOPLE_LIST
+    SMILEYS_PEOPLE_LIST,
+    ANIMALS_NATURE_LIST,
+    FOOD_DRINK_LIST,
+    ACTIVITY_LIST,
+    TRAVEL_PLACES_LIST,
+    OBJECTS_LIST,
+    SYMBOLS_LIST,
+    FLAGS_LIST
 } from './emojis';
 
 export default props => (
@@ -39,25 +46,25 @@ export default props => (
                 <List content={SMILEYS_PEOPLE_LIST} sub="SMILEYS_PEOPLE"/>
             </Route>
             <Route path="/animals-nature">
-                Animals/Nature
+                <List content={ANIMALS_NATURE_LIST} sub="ANIMALS_NATURE"/>
             </Route>
             <Route path="/food-drink">
-                Food/Drink
+                <List content={FOOD_DRINK_LIST} sub="FOOD_DRINK"/>
             </Route>
             <Route path="/activity">
-                Activity
+                <List content={ACTIVITY_LIST} sub="ACTIVITY"/>
             </Route>
             <Route path="/travel-places">
-                Travel/Places
+                <List content={TRAVEL_PLACES_LIST} sub="TRAVEL_PLACES"/>
             </Route>
             <Route path="/objects">
-                Objects
+                <List content={OBJECTS_LIST} sub="OBJECTS"/>
             </Route>
             <Route path="/symbols">
-                Symbols
+                <List content={SYMBOLS_LIST} sub="SYMBOLS"/>
             </Route>
             <Route path="/flags">
-                Flags
+                <List content={FLAGS_LIST} sub="FLAGS"/>
             </Route>
         </Switch>
     </Router>
