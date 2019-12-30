@@ -1,5 +1,6 @@
-# Emoji List 🖖🏻
+![](https://github.com/EduardoRotundaro/emoji-list/blob/master/cover.png?raw=true)
 
+---
 
 ### About
 
