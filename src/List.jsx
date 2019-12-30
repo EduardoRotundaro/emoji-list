@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 import { getEmoji } from './emojis';
 
@@ -15,6 +16,8 @@ export default ({content, sub}) => {
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
+
+        toast.success("✅ Copied!", { autoClose: 1500 });
     }
 
     function renderCards (){
