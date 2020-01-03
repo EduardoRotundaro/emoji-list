@@ -396,9 +396,7 @@ const SMILEYS_PEOPLE = [
     { emoji: "👨‍👨‍👦‍👦" },
     { emoji: "👨‍👨‍👧‍👧" },
     { emoji: "👩‍" },
-    { emoji: "👩‍👧 👩‍👧‍👦 👩‍👦‍👦 👩‍👧‍👧" },
     { emoji: "👨‍👦" },
-    { emoji: "👨‍👧 👨‍👧‍👦 👨‍👦‍👦 👨‍👧‍👧" },
     { emoji: "👚" },
     { emoji: "👕" },
     { emoji: "🧥" },
@@ -434,6 +432,8 @@ const SMILEYS_PEOPLE = [
     { emoji: "💍" },
     { emoji: "🌂" },
     { emoji: "☂" },
+    { emoji: "👨‍👧 👨‍👧‍👦 👨‍👦‍👦 👨‍👧‍👧" },
+    { emoji: "👩‍👧 👩‍👧‍👦 👩‍👦‍👦 👩‍👧‍👧" },
 ];
 const ANIMALS_NATURE = [
     { emoji: "🐶" },

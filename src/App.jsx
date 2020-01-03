@@ -23,7 +23,7 @@ import {
 export default props => (
     <Router>
         <div className="bg-danger text-center">
-            <h3 className="text-white mb-0 pt-2"><b>EMOJI LIST</b>&nbsp;<span role="img" aria-label="Vulcan salute">🖖🏻</span></h3>
+            <h1 className="text-white mb-0 pb-1 pt-3"><b>EMOJI LIST</b>&nbsp;<span role="img" aria-label="Vulcan salute">🖖🏻</span></h1>
         </div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-danger mb-3">
             <div className="navbar-brand"><span role="img" aria-label="Select a category">👉🏻</span></div>
@@ -38,6 +38,15 @@ export default props => (
                 <Link to="/flags" className="nav-item nav-link">Flags</Link>
             </div>
         </nav>
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-auto">
+                    <div className="alert alert-light shadow-sm">
+                        <span role="img" aria-label="Click">👆🏻</span>&nbsp;Click on the Emoji to copy it&nbsp;<span role="img" aria-label="Vulcan salute">❕</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <Switch>
             <Route exact path="/">
                 <Redirect to="/smileys-people"/>
@@ -67,5 +76,19 @@ export default props => (
                 <List content={FLAGS_LIST} sub="FLAGS"/>
             </Route>
         </Switch>
+        <footer>
+            <div className="container border-top mt-2">
+                <div className="row justify-content-center mt-3">
+                    <div className="col-auto">
+                        <a className="btn btn-sm btn-danger" href="https://github.com/EduardoRotundaro/emoji-list" target="_blank" rel="noopener noreferrer">&#9733;&nbsp;Github</a>
+                    </div>
+                </div>
+                <div className="row justify-content-center mb-2">
+                    <div className="col-auto">
+                        <span className="footer-version">v1.0.2</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </Router>
 );
