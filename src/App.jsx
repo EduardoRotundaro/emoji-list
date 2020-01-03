@@ -51,6 +51,9 @@ export default props => (
             <Route exact path="/">
                 <Redirect to="/smileys-people"/>
             </Route>
+            <Route path="/emoji-list/">
+                <Redirect to="/smileys-people"/>
+            </Route>
             <Route path="/smileys-people">
                 <List content={SMILEYS_PEOPLE_LIST} sub="SMILEYS_PEOPLE"/>
             </Route>
