@@ -1,3 +1,5 @@
+import {version, author} from '../../package.json';
+
 const SMILEYS_PEOPLE = [
     { emoji: "👌🏿" },
     { emoji: "👌🏾" },
@@ -1624,8 +1626,10 @@ const FLAGS = [
     { emoji: "🇿🇦" },
     { emoji: "🇿🇲" },
     { emoji: "🇿🇼" },
-]; 
+];
 
+export const APP_VERSION = version;
+export const AUTHOR = author;
 export const SMILEYS_PEOPLE_LIST = SMILEYS_PEOPLE;
 export const ANIMALS_NATURE_LIST = ANIMALS_NATURE;
 export const FOOD_DRINK_LIST = FOOD_DRINK;
@@ -1634,15 +1638,3 @@ export const TRAVEL_PLACES_LIST = TRAVEL_PLACES;
 export const OBJECTS_LIST = OBJECTS;
 export const SYMBOLS_LIST = SYMBOLS;
 export const FLAGS_LIST = FLAGS;
-
-export const getEmoji = (index, sub) => {
-    if(sub==='SMILEYS_PEOPLE') return ((SMILEYS_PEOPLE[index] && SMILEYS_PEOPLE[index].emoji) || '');
-    if(sub==='ANIMALS_NATURE') return ((ANIMALS_NATURE[index] && ANIMALS_NATURE[index].emoji) || '');
-    if(sub==='FOOD_DRINK') return ((FOOD_DRINK[index] && FOOD_DRINK[index].emoji) || '');
-    if(sub==='ACTIVITY') return ((ACTIVITY[index] && ACTIVITY[index].emoji) || '');
-    if(sub==='TRAVEL_PLACES') return ((TRAVEL_PLACES[index] && TRAVEL_PLACES[index].emoji) || '');
-    if(sub==='OBJECTS') return ((OBJECTS[index] && OBJECTS[index].emoji) || '');
-    if(sub==='SYMBOLS') return ((SYMBOLS[index] && SYMBOLS[index].emoji) || '');
-    if(sub==='FLAGS') return ((FLAGS[index] && FLAGS[index].emoji) || '');
-    return '';
-}
