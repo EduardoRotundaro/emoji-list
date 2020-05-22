@@ -1,4 +1,4 @@
-import {version, author} from '../../package.json';
+import {version, author} from '../../../package.json';
 
 const SMILEYS_PEOPLE = [
     { emoji: "👌🏿" },
