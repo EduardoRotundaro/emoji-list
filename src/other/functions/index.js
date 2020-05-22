@@ -1,3 +1,9 @@
+export const updateTitleTag = function changeTitleTagToNameOfCurrentPage(currentPage) {
+    const [, APP] = document.title.split(' | ');
+    document.title = `${currentPage} | ${APP}`;
+}
+
+//TODO: Melhorar
 const getEmoji = (index, sub) => {
     if(sub==='SMILEYS_PEOPLE') return ((SMILEYS_PEOPLE[index] && SMILEYS_PEOPLE[index].emoji) || '');
     if(sub==='ANIMALS_NATURE') return ((ANIMALS_NATURE[index] && ANIMALS_NATURE[index].emoji) || '');
@@ -10,6 +16,7 @@ const getEmoji = (index, sub) => {
     return '';
 }
 
+//TODO: Melhorar
 export const copyToClipBoard = (index) => {
     const emoji = getEmoji(index, sub);
 
