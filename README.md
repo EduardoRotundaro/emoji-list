@@ -1,6 +1,4 @@
-![](https://github.com/EduardoRotundaro/emoji-list/blob/master/cover.png?raw=true)
-
----
+# Emoji-list
 
 ## About
 
