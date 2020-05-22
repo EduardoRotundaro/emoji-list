@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 
-function Objects() {
+function AnimalsNature() {
     useEffect(() => {
     }, []);
 
     return (
         <section className="">
-            objects
+            animals/nature
         </section>
     );
 }
 
-export default Objects;
+export default AnimalsNature;

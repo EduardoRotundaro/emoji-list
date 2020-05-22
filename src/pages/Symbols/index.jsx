@@ -1,17 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {useEffect} from 'react';
 
-function Symbols({}) {
+function Symbols() {
     useEffect(() => {
     }, []);
 
     return (
         <section className="">
+            symbols
         </section>
     );
 }
-
-Symbols.propTypes = {
-};
 
 export default Symbols;

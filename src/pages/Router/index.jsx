@@ -1,17 +1,55 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import {
+    Switch,
+    Route,
+    Redirect,
+} from "react-router-dom";
 
-function Router({}) {
-    useEffect(() => {
-    }, []);
+import Activity from '../Activity';
+import AnimalsNature from '../AnimalsNature';
+import Flags from '../Flags';
+import FoodDrink from '../FoodDrink';
+import NotFound from '../NotFound';
+import Objects from '../Objects';
+import SmileysPeople from '../SmileysPeople';
+import Symbols from '../Symbols';
+import TravelPlaces from '../TravelPlaces';
 
+function Router() {
     return (
-        <section className="">
-        </section>
+        <Switch>
+            <Route exact path="/emoji-list">
+                <Redirect to="/emoji-list/smileys-people" />
+            </Route>
+            <Route path="/emoji-list/activity">
+                <Activity />
+            </Route>
+            <Route path="/emoji-list/animals-nature">
+                <AnimalsNature />
+            </Route>
+            <Route path="/emoji-list/flags">
+                <Flags />
+            </Route>
+            <Route path="/emoji-list/food-drink">
+                <FoodDrink />
+            </Route>
+            <Route path="/emoji-list/objects">
+                <Objects />
+            </Route>
+            <Route path="/emoji-list/smileys-people">
+                <SmileysPeople />
+            </Route>
+            <Route path="/emoji-list/symbols">
+                <Symbols />
+            </Route>
+            <Route path="/emoji-list/travel-places">
+                <TravelPlaces />
+            </Route>
+            <Route path="*">
+                <NotFound />
+            </Route>
+        </Switch>
     );
 }
-
-Router.propTypes = {
-};
 
 export default Router;

@@ -1,17 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {useEffect} from 'react';
 
-function TravelPlaces({}) {
+function TravelPlaces() {
     useEffect(() => {
     }, []);
 
     return (
         <section className="">
+            travel/places
         </section>
     );
 }
-
-TravelPlaces.propTypes = {
-};
 
 export default TravelPlaces;

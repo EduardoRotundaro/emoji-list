@@ -1,17 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {useEffect} from 'react';
 
-function SmileysPeople({}) {
+function SmileysPeople() {
     useEffect(() => {
     }, []);
 
     return (
         <section className="">
+            smileys/people
         </section>
     );
 }
-
-SmileysPeople.propTypes = {
-};
 
 export default SmileysPeople;

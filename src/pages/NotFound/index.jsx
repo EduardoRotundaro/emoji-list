@@ -1,17 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {useEffect} from 'react';
 
-function NotFound({}) {
+function NotFound() {
     useEffect(() => {
     }, []);
 
     return (
         <section className="">
+            404
         </section>
     );
 }
-
-NotFound.propTypes = {
-};
 
 export default NotFound;

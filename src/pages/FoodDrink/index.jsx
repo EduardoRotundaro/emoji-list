@@ -1,17 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React, {useEffect} from 'react';
 
-function FoodDrink({}) {
+function FoodDrink() {
     useEffect(() => {
     }, []);
 
     return (
         <section className="">
+            food/drink
         </section>
     );
 }
-
-FoodDrink.propTypes = {
-};
 
 export default FoodDrink;
