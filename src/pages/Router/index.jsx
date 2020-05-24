@@ -1,14 +1,11 @@
 import React from 'react';
-import {
-    Switch,
-    Route,
-    Redirect,
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Activity from '../Activity';
 import AnimalsNature from '../AnimalsNature';
 import Flags from '../Flags';
 import FoodDrink from '../FoodDrink';
+import Home from '../Home';
 import NotFound from '../NotFound';
 import Objects from '../Objects';
 import SmileysPeople from '../SmileysPeople';
@@ -19,7 +16,7 @@ function Router() {
     return (
         <Switch>
             <Route exact path="/emoji-list">
-                <Redirect to="/emoji-list/smileys-people" />
+                <Home />
             </Route>
             <Route path="/emoji-list/activity">
                 <Activity />

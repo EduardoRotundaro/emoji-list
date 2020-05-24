@@ -1,17 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-function Header({}) {
-    useEffect(() => {
-    }, []);
+import NavBar from '../NavBar';
 
+function Header() {
     return (
         <header>
+            <NavBar />
         </header>
     );
 }
-
-Header.propTypes = {
-};
 
 export default Header;

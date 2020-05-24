@@ -1,17 +1,29 @@
-import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-function Footer({}) {
-    useEffect(() => {
-    }, []);
+import {APP_VERSION, AUTHOR} from '../../assets/constants';
+import {StarIcon} from '../../assets/icons';
 
+function Footer() {
     return (
         <footer>
+            <div>
+                <div>
+                    Feito por <a href="https://github.com/EduardoRotundaro" target="_blank" rel="noopener noreferrer">{AUTHOR}</a>
+                </div>
+                <div>
+                    <a href="https://github.com/EduardoRotundaro/emoji-list" target="_blank" rel="noopener noreferrer">
+                        <span>
+                            <StarIcon />
+                        </span>
+                        Github
+                    </a>
+                </div>
+                <div>
+                    <small>v{APP_VERSION}</small>
+                </div>
+            </div>
         </footer>
     );
 }
-
-Footer.propTypes = {
-};
 
 export default Footer;
