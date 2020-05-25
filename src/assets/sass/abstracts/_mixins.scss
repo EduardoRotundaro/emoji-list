@@ -1,0 +1,349 @@
+@mixin extra-small-devices {
+    @media only screen and (max-width: ($small-devices-breakpoint - 1px)) {
+        @content;
+    }
+}
+
+@mixin small-devices {
+    @media only screen and (min-width: $small-devices-breakpoint) {
+        @content;
+    }
+}
+
+@mixin medium-devices {
+    @media only screen and (min-width: $medium-devices-breakpoint) {
+        @content;
+    }
+}
+
+@mixin large-devices {
+    @media only screen and (min-width: $large-devices-breakpoint) {
+        @content;
+    }
+}
+
+@mixin extra-large-devices {
+    @media only screen and (min-width: $extra-large-devices-breakpoint) {
+        @content;
+    }
+}
+
+@mixin hd-devices {
+    @media only screen and (min-width: $hd-devices-breakpoint) {
+        @content;
+    }
+}
+
+@mixin print-only {
+    display: none !important;
+    @media print {
+        display: block !important;
+    }
+}
+
+@mixin hide-on-print {
+    @media print {
+        display: none !important;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin center-vertically {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin text-break {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+@mixin truncate-text($overflow: ellipsis){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: $overflow;
+}
+
+@mixin shadow-small {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;  
+}
+
+@mixin shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+@mixin shadow-large {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin fade($type) {
+    @if $type== "in" {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+    } 
+    @else if $type== "out" {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 1s, opacity 1s;
+    }
+}
+
+@mixin margin($type: 'both', $size: 'none') {
+    @if $size== 'none' {
+        @if $type== 'both' {
+            margin: 0 !important;
+        }
+        @else if $type== 'x' {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        @else if $type== 'y' {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        @else {
+            margin-#{$type}: 0 !important; 
+        }
+    }
+    @else if $size== 'auto' {
+        @if $type== 'both' {
+            margin: auto !important;
+        }
+        @else if $type== 'x' {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        @else if $type== 'y' {
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+        }
+        @else {
+            margin-#{$type}: auto !important; 
+        }
+    }
+    @else if $size== 'extra-small' {
+        @if $type== 'both' {
+            margin: .25rem !important;
+        }
+        @else if $type== 'x' {
+            margin-left: .25rem !important;
+            margin-right: .25rem !important;
+        }
+        @else if $type== 'y' {
+            margin-top: .25rem !important;
+            margin-bottom: .25rem !important;
+        }
+        @else {
+            margin-#{$type}: .25rem !important; 
+        }
+    }
+    @else if $size== 'small' {
+        @if $type== 'both' {
+            margin: .5rem !important;
+        }
+        @else if $type== 'x' {
+            margin-left: .5rem !important;
+            margin-right: .5rem !important;
+        }
+        @else if $type== 'y' {
+            margin-top: .5rem !important;
+            margin-bottom: .5rem !important;
+        }
+        @else {
+            margin-#{$type}: .5rem !important; 
+        }
+    }
+    @else if $size== 'medium' {
+        @if $type== 'both' {
+            margin: 1rem !important;
+        }
+        @else if $type== 'x' {
+            margin-left: 1rem !important;
+            margin-right: 1rem !important;
+        }
+        @else if $type== 'y' {
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+        }
+        @else {
+            margin-#{$type}: 1rem !important; 
+        }
+    }
+    @else if $size== 'large' {
+        @if $type== 'both' {
+            margin: 1.5rem !important;
+        }
+        @else if $type== 'x' {
+            margin-left: 1.5rem !important;
+            margin-right: 1.5rem !important;
+        }
+        @else if $type== 'y' {
+            margin-top: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+        @else {
+            margin-#{$type}: 1.5rem !important; 
+        }
+    }
+    @else if $size== 'extra-large' {
+        @if $type== 'both' {
+            margin: 3rem !important;
+        }
+        @else if $type== 'x' {
+            margin-left: 3rem !important;
+            margin-right: 3rem !important;
+        }
+        @else if $type== 'y' {
+            margin-top: 3rem !important;
+            margin-bottom: 3rem !important;
+        }
+        @else {
+            margin-#{$type}: 3rem !important; 
+        }
+    }
+}
+
+@mixin padding($type: 'both', $size: 'none') {
+    @if $size== 'none' {
+        @if $type== 'both' {
+            padding: 0 !important;
+        }
+        @else if $type== 'x' {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        @else if $type== 'y' {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        @else {
+            padding-#{$type}: 0 !important; 
+        }
+    }
+    @else if $size== 'extra-small' {
+        @if $type== 'both' {
+            padding: .25rem !important;
+        }
+        @else if $type== 'x' {
+            padding-left: .25rem !important;
+            padding-right: .25rem !important;
+        }
+        @else if $type== 'y' {
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
+        }
+        @else {
+            padding-#{$type}: .25rem !important; 
+        }
+    }
+    @else if $size== 'small' {
+        @if $type== 'both' {
+            padding: .5rem !important;
+        }
+        @else if $type== 'x' {
+            padding-left: .5rem !important;
+            padding-right: .5rem !important;
+        }
+        @else if $type== 'y' {
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important;
+        }
+        @else {
+            padding-#{$type}: .5rem !important; 
+        }
+    }
+    @else if $size== 'medium' {
+        @if $type== 'both' {
+            padding: 1rem !important;
+        }
+        @else if $type== 'x' {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        @else if $type== 'y' {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+        @else {
+            padding-#{$type}: 1rem !important; 
+        }
+    }
+    @else if $size== 'large' {
+        @if $type== 'both' {
+            padding: 1.5rem !important;
+        }
+        @else if $type== 'x' {
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+        }
+        @else if $type== 'y' {
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
+        }
+        @else {
+            padding-#{$type}: 1.5rem !important; 
+        }
+    }
+    @else if $size== 'extra-large' {
+        @if $type== 'both' {
+            padding: 3rem !important;
+        }
+        @else if $type== 'x' {
+            padding-left: 3rem !important;
+            padding-right: 3rem !important;
+        }
+        @else if $type== 'y' {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+        @else {
+            padding-#{$type}: 3rem !important; 
+        }
+    }
+}
+
+@mixin align($direction, $position) {
+    @if $direction== 'horizontal' {
+        -ms-flex-pack: #{$position};
+        justify-content: flex-#{$position};
+    }
+    @else if $direction== 'vertical' {
+        -ms-flex-align: #{$position};
+        align-items: flex-#{$position};
+    }
+}
+
+@mixin column($width) {
+    @if $width== 'auto'{
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    @else {
+        -ms-flex: 0 0 #{(100% / (11-$width))};
+        flex: 0 0 #{(100% / (11-$width))};
+        max-width: #{(100% / (11-$width))};
+    }
+}

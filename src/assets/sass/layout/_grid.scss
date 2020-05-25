@@ -1,0 +1,68 @@
+.block {
+    width: 100%;
+    @include margin('x', 'auto');
+    &__row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    &__column{
+        position: relative;
+        width: 100%;
+    }
+}
+
+@each $width in $grid-columns {
+    .block__column--#{$width} {
+        @include column($width);
+    }
+}
+
+@include extra-small-devices {
+    @each $width in $grid-columns {    
+        .block__column--xs-#{$width} {
+            @include column($width);
+        }
+    }
+}
+
+@include small-devices {
+    @each $width in $grid-columns {    
+        .block__column--sm-#{$width} {
+            @include column($width);
+        }
+    }
+}
+
+@include medium-devices {
+    @each $width in $grid-columns {    
+        .block__column--md-#{$width} {
+            @include column($width);
+        }
+    }
+}
+
+@include large-devices {
+    @each $width in $grid-columns {    
+        .block__column--lg-#{$width} {
+            @include column($width);
+        }
+    }
+}
+
+@include extra-large-devices {
+    @each $width in $grid-columns {    
+        .block__column--xl-#{$width} {
+            @include column($width);
+        }
+    }
+}
+
+@include hd-devices {
+    @each $width in $grid-columns {    
+        .block__column--hd-#{$width} {
+            @include column($width);
+        }
+    }
+}

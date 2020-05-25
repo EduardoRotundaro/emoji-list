@@ -12,9 +12,9 @@ function Footer() {
                 </div>
                 <div>
                     <a href="https://github.com/EduardoRotundaro/emoji-list" target="_blank" rel="noopener noreferrer">
-                        <span>
+                        <figure>
                             <StarIcon />
-                        </span>
+                        </figure>
                         Github
                     </a>
                 </div>
