@@ -352,8 +352,8 @@
         max-width: 100%;
     }
     @else {
-        -ms-flex: 0 0 #{(100% / (11-$width))};
-        flex: 0 0 #{(100% / (11-$width))};
-        max-width: #{(100% / (11-$width))};
+        -ms-flex: 0 0 #{(10% * $width)};
+        flex: 0 0 #{(10% * $width)};
+        max-width: #{(10% * $width)};
     }
 }
