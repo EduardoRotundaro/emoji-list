@@ -17,8 +17,8 @@ function Card({emoji}) {
     }
 
     return (
-        <div className="" onClick={() => ctrlC(emoji)}>
-            <figure>{emoji}</figure>
+        <div className="card" onClick={() => ctrlC(emoji)}>
+            <span className="card__emoji">{emoji}</span>
         </div>
     );
 }
