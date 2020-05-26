@@ -7,7 +7,9 @@ import {updateTitleTag} from '../../other/functions';
 
 function renderListIntoCards() {
     return SMILEYS_PEOPLE_LIST.map(( { emoji }, index ) => (
-        <Card emoji={emoji} key={`smileys_people_${index}`} />
+        <div className="block__column--auto" key={`smileys_people_${index}`}>
+            <Card emoji={emoji} />
+        </div>
     ));
 }
 
@@ -26,14 +28,20 @@ function SmileysPeople() {
     }
 
     return (
-        <section className="">
-            <div>
-                <figure>
-                    <SmileyIcon />
-                </figure>
-            </div>
-            <div>
-                {renderEmojiList()}
+        <section className="page">
+            <div className="block">
+                <div className="block__row">
+                    <div className="block__column--10">
+                        <h2 className="page__title">
+                            <figure>
+                                <SmileyIcon />
+                            </figure>
+                        </h2>
+                    </div>
+                </div>
+                <div className="block__row emoji-list">
+                    {renderEmojiList()}
+                </div>
             </div>
         </section>
     );

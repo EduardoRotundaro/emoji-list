@@ -1,3 +1,22 @@
 body{
     background: $light-color;
 }
+
+.page{
+    @include padding('x', 'small');
+
+    &__title{
+        text-align: center;
+        @include margin('both', 'none');
+
+        figure svg{
+            height: 1em;
+            width: 1em;
+        }
+    }
+}
+
+.emoji-list{
+    @include align('horizontal', 'center');
+    @include margin('y', 'large');
+}

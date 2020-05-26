@@ -7,7 +7,9 @@ import {updateTitleTag} from '../../other/functions';
 
 function renderListIntoCards() {
     return ANIMALS_NATURE_LIST.map(( { emoji }, index ) => (
-        <Card emoji={emoji} key={`animals_nature_${index}`} />
+        <div className="block__column--auto" key={`animals_nature_${index}`}>
+            <Card emoji={emoji} />
+        </div>
     ));
 }
 
@@ -26,14 +28,20 @@ function AnimalsNature() {
     }
 
     return (
-        <section className="">
-            <div>
-                <figure>
-                    <BearIcon />
-                </figure>
-            </div>
-            <div>
-                {renderEmojiList()}
+        <section className="page">
+            <div className="block">
+                <div className="block__row">
+                    <div className="block__column--10">
+                        <h2 className="page__title">
+                            <figure>
+                                <BearIcon />
+                            </figure>
+                        </h2>
+                    </div>
+                </div>
+                <div className="block__row emoji-list">
+                    {renderEmojiList()}
+                </div>
             </div>
         </section>
     );

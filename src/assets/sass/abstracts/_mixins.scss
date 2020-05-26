@@ -326,11 +326,21 @@
 @mixin align($direction, $position) {
     @if $direction== 'horizontal' {
         -ms-flex-pack: #{$position};
-        justify-content: flex-#{$position};
+        @if $position== 'center' {
+            justify-content: #{$position};
+        }
+        @else {
+            justify-content: flex-#{$position};
+        }
     }
     @else if $direction== 'vertical' {
         -ms-flex-align: #{$position};
-        align-items: flex-#{$position};
+        @if $position== 'center' {
+            align-items: #{$position};
+        }
+        @else {
+            align-items: flex-#{$position};
+        }
     }
 }
 
