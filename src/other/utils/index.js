@@ -6,7 +6,7 @@ const DEFAULT_TOAST_SUCCESS_MESSAGE = 'Copied!';
 const DEFAULT_TOAST_SUCCESS_ICON = '✅';
 const DEFAULT_TOAST_OPTIONS = {
     position: toast.POSITION.BOTTOM_CENTER,
-    autoClose: 4000,
+    autoClose: 2000,
     pauseOnHover: true,
     closeOnClick: true
 }
